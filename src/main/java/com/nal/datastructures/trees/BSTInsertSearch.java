@@ -13,17 +13,7 @@ package com.nal.datastructures.trees;
  */
 public class BSTInsertSearch {
 
-    class Node {
-        int data;
-        Node left, right;
-
-        public Node(int data) {
-            this.data = data;
-            left = right = null;
-        }
-    }
-
-    Node root;
+    TreeNode root;
 
     public BSTInsertSearch() {
         this.root = null;
@@ -34,9 +24,9 @@ public class BSTInsertSearch {
         root = insertInternal(root, value);
     }
 
-    private Node insertInternal(Node root, int value) {
+    private TreeNode insertInternal(TreeNode root, int value) {
         if (root == null)
-            root = new Node(value);
+            root = new TreeNode(value);
         else if (value <= root.data)
             root.left = insertInternal(root.left, value);
         else
@@ -50,7 +40,7 @@ public class BSTInsertSearch {
         System.out.println();
     }
 
-    public void inorderTraversal(Node root) {
+    public void inorderTraversal(TreeNode root) {
         if (root == null)
             return;
         inorderTraversal(root.left);
@@ -59,11 +49,11 @@ public class BSTInsertSearch {
     }
 
 //    O(h) where h is height of Binary Search Tree
-    public Node searchNode(int value) {
+    public TreeNode searchNode(int value) {
         return searchNodeInternal(root, value);
     }
 
-    private Node searchNodeInternal(Node root, int value) {
+    private TreeNode searchNodeInternal(TreeNode root, int value) {
         if (root == null || root.data == value)
             return root;
         if (value <= root.data)
@@ -81,7 +71,7 @@ public class BSTInsertSearch {
         binarySearchTree.insert(20);
         binarySearchTree.insert(40);
         binarySearchTree.inorderTraversal();
-        Node node = binarySearchTree.searchNode(30);
+        TreeNode node = binarySearchTree.searchNode(30);
         if(node != null) {
             System.out.println("Node found. Printing subtree: ");
             binarySearchTree.inorderTraversal(node);

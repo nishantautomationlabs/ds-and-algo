@@ -5,17 +5,7 @@ package com.nal.datastructures.trees;
  */
 public class BinarySearchTreeDelete {
 
-    class Node {
-        int data;
-        Node left, right;
-
-        public Node(int value) {
-            this.data = value;
-            left = right = null;
-        }
-    }
-
-    Node root;
+    TreeNode root;
 
     public BinarySearchTreeDelete() {
         this.root = null;
@@ -25,9 +15,9 @@ public class BinarySearchTreeDelete {
         root = insert(root, value);
     }
 
-    private Node insert(Node root, int value) {
+    private TreeNode insert(TreeNode root, int value) {
         if (root == null) {
-            root = new Node(value);
+            root = new TreeNode(value);
         } else if (value < root.data)
             root.left = insert(root.left, value);
         else
@@ -41,7 +31,7 @@ public class BinarySearchTreeDelete {
         System.out.println();
     }
 
-    private void inorderTraversal(Node root) {
+    private void inorderTraversal(TreeNode root) {
         if (root == null)
             return;
         inorderTraversal(root.left);
@@ -53,7 +43,7 @@ public class BinarySearchTreeDelete {
         this.root = deleteNode(root, value);
     }
 
-    private Node deleteNode(Node root, int value) {
+    private TreeNode deleteNode(TreeNode root, int value) {
         if (root == null) {
             System.out.println("Node to delete not found");
             return null;
@@ -76,7 +66,7 @@ public class BinarySearchTreeDelete {
         return root;
     }
 
-    private int minimumValue(Node root) {
+    private int minimumValue(TreeNode root) {
         int min = root.data;
         while (root != null) {
             min = root.data;

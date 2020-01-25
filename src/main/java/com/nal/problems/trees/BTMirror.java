@@ -1,13 +1,13 @@
 package com.nal.problems.trees;
 
-import com.nal.datastructures.trees.Node;
+import com.nal.datastructures.trees.TreeNode;
 
 /**
  * Created by nishant on 19/01/20.
  */
 public class BTMirror {
 
-    Node root;
+    TreeNode root;
 
     public BTMirror() {
         this.root = null;
@@ -17,11 +17,11 @@ public class BTMirror {
         root = mirrorBT(root);
     }
 
-    private Node mirrorBT(Node root) {
+    private TreeNode mirrorBT(TreeNode root) {
         if (root == null)
             return null;
-        Node left = mirrorBT(root.left);
-        Node right = mirrorBT(root.right);
+        TreeNode left = mirrorBT(root.left);
+        TreeNode right = mirrorBT(root.right);
         root.left = right;
         root.right = left;
         return root;
@@ -33,7 +33,7 @@ public class BTMirror {
         System.out.println();
     }
 
-    private void inorderTraversal(Node root) {
+    private void inorderTraversal(TreeNode root) {
         if (root == null)
             return;
         inorderTraversal(root.left);
@@ -43,15 +43,15 @@ public class BTMirror {
 
     public static void main(String[] args) {
         BTMirror binaryTree = new BTMirror();
-        binaryTree.root = new Node(10);
-        binaryTree.root.left = new Node(20);
-        binaryTree.root.right = new Node(30);
-        binaryTree.root.left.left = new Node(40);
-        binaryTree.root.left.right = new Node(50);
-        binaryTree.root.right.left = new Node(60);
-        binaryTree.root.right.right = new Node(70);
-        binaryTree.root.left.left.left = new Node(80);
-        binaryTree.root.left.left.right = new Node(90);
+        binaryTree.root = new TreeNode(10);
+        binaryTree.root.left = new TreeNode(20);
+        binaryTree.root.right = new TreeNode(30);
+        binaryTree.root.left.left = new TreeNode(40);
+        binaryTree.root.left.right = new TreeNode(50);
+        binaryTree.root.right.left = new TreeNode(60);
+        binaryTree.root.right.right = new TreeNode(70);
+        binaryTree.root.left.left.left = new TreeNode(80);
+        binaryTree.root.left.left.right = new TreeNode(90);
         binaryTree.inorderTraversal();
         binaryTree.mirrorBT();
         binaryTree.inorderTraversal();

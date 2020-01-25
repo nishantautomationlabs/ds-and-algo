@@ -1,6 +1,6 @@
 package com.nal.problems.trees;
 
-import com.nal.datastructures.trees.Node;
+import com.nal.datastructures.trees.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -15,7 +15,7 @@ import java.util.Queue;
  */
 public class BTisCompleteBT {
 
-    Node root;
+    TreeNode root;
 
     public BTisCompleteBT() {
         this.root = null;
@@ -25,14 +25,14 @@ public class BTisCompleteBT {
         return isCompleteUsingLevelOrderTraversal(root);
     }
 
-    private boolean isCompleteUsingLevelOrderTraversal(Node root) {
+    private boolean isCompleteUsingLevelOrderTraversal(TreeNode root) {
         if (root == null)
             return true;
-        Queue<Node> queue = new LinkedList<>();
+        Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
         boolean firstNonFullNodeEncountered = false;
         while (!queue.isEmpty()) {
-            Node node = queue.remove();
+            TreeNode node = queue.remove();
             if (node.left != null) {
                 if (firstNonFullNodeEncountered)
                     return false;
@@ -53,13 +53,13 @@ public class BTisCompleteBT {
         return isCompleteUsingNodeIndex(root, 0, getNodesCount(root));
     }
 
-    private int getNodesCount(Node root) {
+    private int getNodesCount(TreeNode root) {
         if (root == null)
             return 0;
         return getNodesCount(root.left) + getNodesCount(root.right) + 1;
     }
 
-    private boolean isCompleteUsingNodeIndex(Node root, int index, int nodesCount) {
+    private boolean isCompleteUsingNodeIndex(TreeNode root, int index, int nodesCount) {
         if (root == null)
             return true;
         if (index > nodesCount - 1)
@@ -70,14 +70,14 @@ public class BTisCompleteBT {
 
     public static void main(String[] args) {
         BTisCompleteBT binaryTree = new BTisCompleteBT();
-        binaryTree.root = new Node(10);
-        binaryTree.root.left = new Node(20);
-        binaryTree.root.right = new Node(30);
-        binaryTree.root.left.left = new Node(40);
-        binaryTree.root.left.right = new Node(50);
-        binaryTree.root.right.left = new Node(60);
-        binaryTree.root.right.right = new Node(70);
-        binaryTree.root.left.right.left = new Node(80);
+        binaryTree.root = new TreeNode(10);
+        binaryTree.root.left = new TreeNode(20);
+        binaryTree.root.right = new TreeNode(30);
+        binaryTree.root.left.left = new TreeNode(40);
+        binaryTree.root.left.right = new TreeNode(50);
+        binaryTree.root.right.left = new TreeNode(60);
+        binaryTree.root.right.right = new TreeNode(70);
+        binaryTree.root.left.right.left = new TreeNode(80);
 
         System.out.println("Count: " + binaryTree.getNodesCount(binaryTree.root));
         System.out.println("Is Complete Using Level Order Traversal: " + binaryTree.isCompleteUsingLevelOrderTraversal());

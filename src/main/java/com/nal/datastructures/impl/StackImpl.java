@@ -5,15 +5,15 @@ import java.util.EmptyStackException;
 /**
  * Created by nishant on 10/01/20.
  */
-public class StackImpl {
+public class StackImpl<T> {
 
     private int size;
-    private long[] arr;
+    private T[] arr;
     private int top;
 
     public StackImpl(int size) {
         this.size = size;
-        this.arr = new long[size];
+        this.arr = (T[]) new Object[size];
         this.top = -1;
     }
 
@@ -22,20 +22,20 @@ public class StackImpl {
     }
 
     //Time Complexity: O(1)
-    public void push(int value) {
+    public void push(T value) {
         if (isFull())
             throw new IllegalStateException();
         arr[++top] = value;
     }
 
     //Time Complexity: O(1)
-    public long pop() {
+    public T pop() {
         if (top < 0)
             throw new EmptyStackException();
         return arr[top--];
     }
 
-    public long peek() {
+    public T peek() {
         if (top < 0)
             throw new EmptyStackException();
         return arr[top];
@@ -59,7 +59,7 @@ public class StackImpl {
     }
 
     public static void main(String[] args) {
-        StackImpl stack = new StackImpl();
+        StackImpl<Integer> stack = new StackImpl<>();
         System.out.println("Stack Is Empty: " + stack.isEmpty());
         stack.push(1);
         stack.push(2);

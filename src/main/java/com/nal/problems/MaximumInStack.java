@@ -1,5 +1,7 @@
 package com.nal.problems;
 
+import com.nal.datastructures.impl.StackImpl;
+
 import java.util.EmptyStackException;
 import java.util.Iterator;
 import java.util.Stack;
@@ -9,17 +11,17 @@ import java.util.Stack;
  */
 public class MaximumInStack {
 
-    private Stack<Integer> stack;
-    private Stack<Integer> maxStack;
+    private StackImpl<Integer> stack;
+    private StackImpl<Integer> maxStack;
 
     public MaximumInStack() {
-        this.stack = new Stack<>();
-        this.maxStack = new Stack<>();
+        this.stack = new StackImpl<>();
+        this.maxStack = new StackImpl<>();
     }
 
     public void push(Integer value) {
         stack.push(value);
-        if (maxStack.empty() || maxStack.peek() <= value) {
+        if (maxStack.isEmpty() || maxStack.peek() <= value) {
             maxStack.push(value);
         }
     }
@@ -33,7 +35,7 @@ public class MaximumInStack {
     }
 
     public Integer getMax() {
-        if(maxStack.empty()) {
+        if(maxStack.isEmpty()) {
             throw new EmptyStackException();
         }
         return maxStack.peek();
@@ -41,23 +43,9 @@ public class MaximumInStack {
 
     public void printStacks() {
         System.out.print("Stack is ");
-        printStack(stack);
+        stack.print();
         System.out.print("Max Stack is ");
-        printStack(maxStack);
-    }
-
-    public void printStack(Stack<Integer> stack) {
-        if(stack.empty()) {
-            System.out.println("Empty");
-            return;
-        }
-        Iterator<Integer> iterator = stack.iterator();
-        while (iterator.hasNext()) {
-            System.out.print(iterator.next());
-            if (iterator.hasNext())
-                System.out.print(" --> ");
-        }
-        System.out.println();
+        maxStack.print();
     }
 
     public static void main(String[] args) {

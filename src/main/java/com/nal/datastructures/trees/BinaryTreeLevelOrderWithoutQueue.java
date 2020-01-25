@@ -2,11 +2,14 @@ package com.nal.datastructures.trees;
 
 /**
  * Created by nishant on 18/01/20.
+ Time Complexity: O(n^2) in worst case.
+ Space Complexity: O(n) in worst case
  */
 
 public class BinaryTreeLevelOrderWithoutQueue {
 
-    Node root;
+    TreeNode root;
+    
     public BinaryTreeLevelOrderWithoutQueue() {
         root = null;
     }
@@ -18,7 +21,7 @@ public class BinaryTreeLevelOrderWithoutQueue {
         System.out.println();
     }
 
-    private void printNodesAtLevel(Node root, int height) {
+    private void printNodesAtLevel(TreeNode root, int height) {
         if (root == null)
             return;
         if (height == 0)
@@ -33,7 +36,7 @@ public class BinaryTreeLevelOrderWithoutQueue {
         return getHeight(root);
     }
 
-    public int getHeight(Node root) {
+    public int getHeight(TreeNode root) {
         if (root == null)
             return -1;
         int lHeight = getHeight(root.left) + 1;
@@ -46,14 +49,14 @@ public class BinaryTreeLevelOrderWithoutQueue {
 
     public static void main(String[] args) {
         BinaryTreeLevelOrderWithoutQueue binaryTree = new BinaryTreeLevelOrderWithoutQueue();
-        binaryTree.root = new Node(10);
-        binaryTree.root.left = new Node(20);
-        binaryTree.root.right = new Node(30);
-        binaryTree.root.left.left = new Node(40);
-        binaryTree.root.left.right = new Node(50);
-        binaryTree.root.right.left = new Node(60);
-        binaryTree.root.right.right = new Node(70);
-        binaryTree.root.right.right.left = new Node(80);
+        binaryTree.root = new TreeNode(10);
+        binaryTree.root.left = new TreeNode(20);
+        binaryTree.root.right = new TreeNode(30);
+        binaryTree.root.left.left = new TreeNode(40);
+        binaryTree.root.left.right = new TreeNode(50);
+        binaryTree.root.right.left = new TreeNode(60);
+        binaryTree.root.right.right = new TreeNode(70);
+        binaryTree.root.right.right.left = new TreeNode(80);
 
         System.out.println("Height of the Binary Tree is: " + binaryTree.getHeight());
         binaryTree.levelOrderTraversal();

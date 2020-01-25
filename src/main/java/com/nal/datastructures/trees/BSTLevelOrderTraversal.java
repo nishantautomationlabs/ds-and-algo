@@ -5,20 +5,12 @@ import java.util.Queue;
 
 /**
  * Created by nishant on 18/01/20.
+ * Time Complexity: O(n) where n is number of nodes in the binary tree
+ * Space Complexity: O(n) where n is number of nodes in the binary tree
  */
 public class BSTLevelOrderTraversal {
 
-    class Node {
-        int data;
-        Node left, right;
-
-        public Node(int data) {
-            this.data = data;
-            left = right = null;
-        }
-    }
-
-    Node root;
+    TreeNode root;
 
     public BSTLevelOrderTraversal() {
         this.root = null;
@@ -29,9 +21,9 @@ public class BSTLevelOrderTraversal {
         root = insertInternal(root, value);
     }
 
-    private Node insertInternal(Node root, int value) {
+    private TreeNode insertInternal(TreeNode root, int value) {
         if (root == null)
-            root = new Node(value);
+            root = new TreeNode(value);
         else if (value <= root.data)
             root.left = insertInternal(root.left, value);
         else
@@ -45,12 +37,12 @@ public class BSTLevelOrderTraversal {
         System.out.println();
     }
 
-    private void levelOrderTraversal(Node root) {
-        Queue<Node> queue = new LinkedList<>();
+    private void levelOrderTraversal(TreeNode root) {
+        Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
         while (!queue.isEmpty())
         {
-            Node node = queue.poll();
+            TreeNode node = queue.poll();
             if(node.left != null)
                 queue.add(node.left);
             if(node.right != null)

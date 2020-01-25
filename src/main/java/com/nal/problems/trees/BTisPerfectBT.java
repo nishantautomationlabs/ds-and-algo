@@ -1,6 +1,6 @@
 package com.nal.problems.trees;
 
-import com.nal.datastructures.trees.Node;
+import com.nal.datastructures.trees.TreeNode;
 
 /**
  * Created by nishant on 19/01/20.
@@ -13,7 +13,7 @@ import com.nal.datastructures.trees.Node;
  */
 public class BTisPerfectBT {
 
-    Node root;
+    TreeNode root;
 
     public BTisPerfectBT() {
         this.root = null;
@@ -23,7 +23,7 @@ public class BTisPerfectBT {
         return isPerfect(root, getDepth(root), 0);
     }
 
-    private int getDepth(Node root) {
+    private int getDepth(TreeNode root) {
         int depth = -1;
         while (root != null) {
             depth++;
@@ -32,7 +32,7 @@ public class BTisPerfectBT {
         return depth;
     }
 
-    private boolean isPerfect(Node root, int treeDepth, int level) {
+    private boolean isPerfect(TreeNode root, int treeDepth, int level) {
         if (root == null)
             return true;
         if (root.left == null && root.right == null) {
@@ -46,15 +46,15 @@ public class BTisPerfectBT {
 
     public static void main(String[] args) {
         BTisPerfectBT binaryTree = new BTisPerfectBT();
-        binaryTree.root = new Node(10);
-        binaryTree.root.left = new Node(20);
-        binaryTree.root.right = new Node(30);
-        binaryTree.root.left.left = new Node(40);
-        binaryTree.root.left.right = new Node(50);
-        binaryTree.root.right.left = new Node(60);
-        binaryTree.root.right.right = new Node(70);
-        binaryTree.root.left.left.left = new Node(80);
-        binaryTree.root.left.left.right = new Node(90);
+        binaryTree.root = new TreeNode(10);
+        binaryTree.root.left = new TreeNode(20);
+        binaryTree.root.right = new TreeNode(30);
+        binaryTree.root.left.left = new TreeNode(40);
+        binaryTree.root.left.right = new TreeNode(50);
+        binaryTree.root.right.left = new TreeNode(60);
+        binaryTree.root.right.right = new TreeNode(70);
+        binaryTree.root.left.left.left = new TreeNode(80);
+        binaryTree.root.left.left.right = new TreeNode(90);
 
         System.out.println("Is Perfect: " + binaryTree.isPerfect());
     }

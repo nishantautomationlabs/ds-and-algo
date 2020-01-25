@@ -1,6 +1,6 @@
 package com.nal.problems.trees;
 
-import com.nal.datastructures.trees.Node;
+import com.nal.datastructures.trees.TreeNode;
 
 /**
  * Created by nishant on 18/01/20.
@@ -8,7 +8,7 @@ import com.nal.datastructures.trees.Node;
 
 public class BTisBSTCheck {
 
-    Node root;
+    TreeNode root;
     public BTisBSTCheck() {
         this.root = null;
     }
@@ -17,7 +17,7 @@ public class BTisBSTCheck {
         return isBST(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
     }
 
-    public boolean isBST(Node root, int min, int max) {
+    public boolean isBST(TreeNode root, int min, int max) {
         if (root == null)
             return true;
         if (root.data < min || root.data > max)
@@ -30,7 +30,7 @@ public class BTisBSTCheck {
         return isBSTUsingNode(root, null, null);
     }
 
-    public boolean isBSTUsingNode(Node root, Node left, Node right) {
+    public boolean isBSTUsingNode(TreeNode root, TreeNode left, TreeNode right) {
         if (root == null)
             return true;
         if ((left != null && root.data <= left.data) || (right != null && root.data >= right.data))
@@ -43,7 +43,7 @@ public class BTisBSTCheck {
         return isBSTUsingInOrderTraversal(root, null);
     }
 
-    public boolean isBSTUsingInOrderTraversal(Node root, Node prev) {
+    public boolean isBSTUsingInOrderTraversal(TreeNode root, TreeNode prev) {
         if (root == null)
             return true;
         if (!isBSTUsingInOrderTraversal(root.left, prev))
@@ -58,13 +58,13 @@ public class BTisBSTCheck {
 
     public static void main(String[] args) {
         BTisBSTCheck binaryTree = new BTisBSTCheck();
-        binaryTree.root = new Node(50);
-        binaryTree.root.left = new Node(30);
-        binaryTree.root.left.left = new Node(20);
-        binaryTree.root.left.right = new Node(40);
-        binaryTree.root.right = new Node(70);
-        binaryTree.root.right.left = new Node(60);
-        binaryTree.root.right.right = new Node(80);
+        binaryTree.root = new TreeNode(50);
+        binaryTree.root.left = new TreeNode(30);
+        binaryTree.root.left.left = new TreeNode(20);
+        binaryTree.root.left.right = new TreeNode(40);
+        binaryTree.root.right = new TreeNode(70);
+        binaryTree.root.right.left = new TreeNode(60);
+        binaryTree.root.right.right = new TreeNode(80);
         System.out.println("isBST:" + binaryTree.isBST());
         System.out.println("isBST using Node:" + binaryTree.isBSTUsingNode());
         System.out.println("isBST using Inorder Traversal sorted nature :" + binaryTree.isBSTUsingInOrderTraversal());

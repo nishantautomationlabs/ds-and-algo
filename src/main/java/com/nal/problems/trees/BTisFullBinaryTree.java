@@ -1,6 +1,6 @@
 package com.nal.problems.trees;
 
-import com.nal.datastructures.trees.Node;
+import com.nal.datastructures.trees.TreeNode;
 
 /**
  * Created by nishant on 18/01/20.
@@ -17,7 +17,7 @@ import com.nal.datastructures.trees.Node;
 
 public class BTisFullBinaryTree {
 
-    Node root;
+    TreeNode root;
 
     public BTisFullBinaryTree() {
         this.root = null;
@@ -27,7 +27,7 @@ public class BTisFullBinaryTree {
         return isFullBinaryTree(root);
     }
 
-    public boolean isFullBinaryTree(Node root) {
+    public boolean isFullBinaryTree(TreeNode root) {
         if (root == null)
             return true;
         if (root.left == null && root.right == null)
@@ -39,13 +39,13 @@ public class BTisFullBinaryTree {
 
     public static void main(String[] args) {
         BTisFullBinaryTree binaryTree = new BTisFullBinaryTree();
-        binaryTree.root = new Node(50);
-        binaryTree.root.left = new Node(30);
-        binaryTree.root.left.left = new Node(20);
-        binaryTree.root.left.right = new Node(40);
-        binaryTree.root.right = new Node(70);
-        binaryTree.root.right.left = new Node(60);
-        binaryTree.root.right.right = new Node(80);
+        binaryTree.root = new TreeNode(50);
+        binaryTree.root.left = new TreeNode(30);
+        binaryTree.root.left.left = new TreeNode(20);
+        binaryTree.root.left.right = new TreeNode(40);
+        binaryTree.root.right = new TreeNode(70);
+        binaryTree.root.right.left = new TreeNode(60);
+        binaryTree.root.right.right = new TreeNode(80);
         System.out.println("isFullBinaryTree:" + binaryTree.isFullBinaryTree());
     }
 }

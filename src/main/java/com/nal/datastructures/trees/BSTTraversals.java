@@ -13,17 +13,7 @@ package com.nal.datastructures.trees;
  */
 public class BSTTraversals {
 
-    class Node {
-        int data;
-        Node left, right;
-
-        public Node(int data) {
-            this.data = data;
-            left = right = null;
-        }
-    }
-
-    Node root;
+    TreeNode root;
 
     public BSTTraversals() {
         this.root = null;
@@ -34,9 +24,9 @@ public class BSTTraversals {
         root = insertInternal(root, value);
     }
 
-    private Node insertInternal(Node root, int value) {
+    private TreeNode insertInternal(TreeNode root, int value) {
         if (root == null)
-            root = new Node(value);
+            root = new TreeNode(value);
         else if (value <= root.data)
             root.left = insertInternal(root.left, value);
         else
@@ -50,7 +40,7 @@ public class BSTTraversals {
         System.out.println();
     }
 
-    public void inorderTraversal(Node root) {
+    public void inorderTraversal(TreeNode root) {
         if (root == null)
             return;
         inorderTraversal(root.left);
@@ -64,7 +54,7 @@ public class BSTTraversals {
         System.out.println();
     }
 
-    public void preOrderTraversal(Node root) {
+    public void preOrderTraversal(TreeNode root) {
         if (root == null)
             return;
         System.out.print(root.data + " --> ");
@@ -78,7 +68,7 @@ public class BSTTraversals {
         System.out.println();
     }
 
-    public void postOrderTraversal(Node root) {
+    public void postOrderTraversal(TreeNode root) {
         if (root == null)
             return;
         postOrderTraversal(root.left);

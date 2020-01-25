@@ -1,4 +1,4 @@
-package com.nal.problems.trees;
+package com.nal.problems;
 
 /**
  * Created by nishant on 20/01/20.
