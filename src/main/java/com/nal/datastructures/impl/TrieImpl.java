@@ -2,6 +2,10 @@ package com.nal.datastructures.impl;
 
 /**
  * Created by nishant on 23/01/20.
+ * Insert and search costs O(key_length), however the memory requirements of Trie is
+ * O(ALPHABET_SIZE * key_length * N) where N is number of keys in Trie.
+ * There are efficient representation of trie nodes (e.g. compressed trie, ternary search tree, etc.)
+ * to minimize memory requirements of trie.
  */
 public class TrieImpl {
 
