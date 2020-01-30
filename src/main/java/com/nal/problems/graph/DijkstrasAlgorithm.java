@@ -4,6 +4,10 @@ import java.util.*;
 
 /**
  * Created by nishant on 27/01/20.
+ * The time complexity of the above code/algorithm looks O(V^2) as there are two nested while loops.
+ * If we take a closer look, we can observe that the statements in inner loop are executed O(V+E) times (similar to BFS).
+ * The inner loop has decreaseKey() operation which takes O(LogV) time. So overall time complexity is O(E+V)*O(LogV)
+ * which is O((E+V)*LogV) = O(ELogV)
  */
 public class DijkstrasAlgorithm {
 

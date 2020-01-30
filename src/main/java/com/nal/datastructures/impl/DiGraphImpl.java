@@ -12,6 +12,7 @@ import java.util.Queue;
  * unlike trees, graphs may contain cycles, so we may come to the same node again. To avoid processing a node more than once,
  * we use a boolean visited array.
  * DFS Time Complexity: O(V+E) where V is number of vertices in the graph and E is number of edges in the graph.
+ * BFS Time Complexity: Time Complexity: O(V+E) where V is number of vertices in the graph and E is number of edges in the graph.
  */
 public class DiGraphImpl {
 
