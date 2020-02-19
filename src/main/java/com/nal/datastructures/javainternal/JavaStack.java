@@ -8,7 +8,6 @@ import java.util.Stack;
  */
 public class JavaStack {
 
-
     public static void main(String[] args)
     {
         Stack<Integer> integerStack = new Stack<>();
@@ -26,7 +25,7 @@ public class JavaStack {
         System.out.println("Pop: " + integerStack.pop());
         integerStack.push(9);
         printStack(integerStack);
-        System.out.println("Search 1: "+ integerStack.search(1));  //count from bottom
+        System.out.println("Search 1: "+ integerStack.search(1));  //count from stack top
         System.out.println("Size: " + integerStack.size());
         System.out.println("Capacity: " + integerStack.capacity());
         integerStack.setSize(11);

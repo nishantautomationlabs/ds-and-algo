@@ -21,7 +21,7 @@ public class JavaQueue {
         System.out.println("Offer: " + queue.offer(6));
         System.out.println("Size: " + queue.size());
         printQueue(queue);
-        System.out.println("Offer: " + queue.element());
+        System.out.println("Element: " + queue.element());
         System.out.println("Peek: " + queue.peek());
         System.out.println("Poll: " + queue.poll());
         System.out.println("Poll: " + queue.poll());

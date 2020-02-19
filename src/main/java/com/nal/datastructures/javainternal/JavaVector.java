@@ -5,14 +5,17 @@ import java.util.Vector;
 
 /**
  * Created by nishant on 17/01/20.
- * Vector implements a dynamic array that means it can grow or shrink as required. Like an array, it contains components that can be accessed using an integer index
- * They are very similar to ArrayList but Vector is synchronised and have some legacy method which collection framework does not contain.
- * It extends AbstractList and implements List interfaces.
- *
+ * Vector implements a dynamic array that means it can grow or shrink as required. Like an array, it contains components
+ * that can be accessed using an integer index
+ * They are very similar to ArrayList but Vector is synchronised and have some legacy method which collection framework
+ * does not contain. It extends AbstractList and implements List interfaces.
  * Synchronization : Vector is synchronized, while arrayList is not synchronized
  * Performance: ArrayList is faster, since it is non-synchronized, while vector operations give slower performance since they are synchronized (thread-safe).
- * Data Growth: ArrayList and Vector both grow and shrink dynamically to maintain optimal use of storage – but the way they resize is different. ArrayList increments 50% of the current array size if the number of elements exceeds its capacity, while vector increments 100% – essentially doubling the current array size.
- * Traversal: Vector can use both Enumeration and Iterator for traversing over elements of vector while ArrayList can only use Iterator for traversing.
+ * Data Growth: ArrayList and Vector both grow and shrink dynamically to maintain optimal use of storage – but the way they resize is different.
+ * ArrayList increments 50% of the current array size if the number of elements exceeds its capacity,
+ * while vector increments 100% – essentially doubling the current array size.
+ * Traversal: Vector can use both Enumeration and Iterator for traversing over elements of vector while
+ * ArrayList can only use Iterator for traversing.
  */
 public class JavaVector {
 

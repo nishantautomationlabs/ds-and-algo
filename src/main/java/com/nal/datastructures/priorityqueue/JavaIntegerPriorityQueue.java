@@ -9,10 +9,12 @@ import java.util.PriorityQueue;
  * PriorityQueue doesn’t permit null.
  * We can’t create PriorityQueue of Objects that are non-comparable
  * PriorityQueue are unbound queues.
- * The head of this queue is the least element with respect to the specified ordering. If multiple elements are tied for least value, the head is one of those elements — ties are broken arbitrarily.
+ * The head of this queue is the least element with respect to the specified ordering. If multiple elements are tied
+ * for least value, the head is one of those elements — ties are broken arbitrarily.
  * The queue retrieval operations poll,  remove,  peek, and element access the element at the head of the queue.
  * It inherits methods from AbstractQueue, AbstractCollection, Collection and Object class.
- * PriorityQueue is not thread safe, so java provides PriorityBlockingQueue class that implements the BlockingQueue interface to use in java multithreading environment.
+ * PriorityQueue is not thread safe, so java provides PriorityBlockingQueue class that implements the
+ * BlockingQueue interface to use in java multithreading environment.
  * Java Priority Queue implementation provides O(log(n)) time for enqueing and dequeing method.
  */
 public class JavaIntegerPriorityQueue {

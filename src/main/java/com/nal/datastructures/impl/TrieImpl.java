@@ -9,7 +9,7 @@ package com.nal.datastructures.impl;
  */
 public class TrieImpl {
 
-    static final int ALPHABET_SIZE = 26;
+    private static final int ALPHABET_SIZE = 26;
 
     class TrieNode {
         boolean isEndOfWord;

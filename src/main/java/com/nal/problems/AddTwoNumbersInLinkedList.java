@@ -46,7 +46,7 @@ public class AddTwoNumbersInLinkedList {
 
     private static Node addLinkedList(Node firstLL, Node secondLL) {
         int carry = 0;
-        Node head3 = null;
+        Node head = null;
         Node curr = null;
         while (firstLL != null || secondLL != null) {
             int value1 = firstLL == null ? 0 : firstLL.data;
@@ -55,8 +55,8 @@ public class AddTwoNumbersInLinkedList {
             Node newNode = new Node(sum % 10);
             carry = sum / 10;
 
-            if (head3 == null) {
-                head3 = newNode;
+            if (head == null) {
+                head = newNode;
             } else {
                 curr.next = newNode;
             }
@@ -69,7 +69,7 @@ public class AddTwoNumbersInLinkedList {
         if (carry != 0) {
             curr.next = new Node(carry);
         }
-        return head3;
+        return head;
     }
 
     private static Node reverseLinkedList(Node head) {

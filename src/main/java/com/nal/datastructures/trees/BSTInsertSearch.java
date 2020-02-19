@@ -58,8 +58,8 @@ public class BSTInsertSearch {
             return root;
         if (value <= root.data)
             return searchNodeInternal(root.left, value);
-
-        return searchNodeInternal(root.right, value);
+        else
+            return searchNodeInternal(root.right, value);
     }
 
     public static void main(String[] args) {

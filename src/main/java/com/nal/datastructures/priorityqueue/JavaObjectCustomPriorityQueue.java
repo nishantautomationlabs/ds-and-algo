@@ -46,6 +46,7 @@ public class JavaObjectCustomPriorityQueue {
         Comparator<Customer> comparator = Comparator.comparingInt(o -> o.getCustomerID());
 
         PriorityQueue<Customer> priorityQueue = new PriorityQueue<>(comparator);
+//        PriorityQueue<Customer> priorityQueue = new PriorityQueue<>(Comparator.comparingInt(value -> value.customer_id));
         priorityQueue.add(new Customer(1466, "Nishant"));
         priorityQueue.add(new Customer(546, "Avik"));
         priorityQueue.add(new Customer(2256, "Ashish"));

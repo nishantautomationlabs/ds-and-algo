@@ -28,7 +28,7 @@ public class MergeSort {
     private void sort(int[] arr, int[] temp, int start, int end) {
         if (start >= end)
             return;
-        int middle = (start + end) / 2;
+        int middle = start + (end - start) / 2;
         sort(arr, temp, start, middle);
         sort(arr, temp, middle + 1, end);
         mergeHalves(arr, temp, start, end);
@@ -36,7 +36,7 @@ public class MergeSort {
     }
 
     private void mergeHalves(int[] arr, int[] temp, int start, int end) {
-        int middle = (start + end) / 2;
+        int middle = start + (end - start) / 2;
         int leftHalfIndex = start;
         int rightHalfIndex = middle + 1;
         int tempArrIndex = start;

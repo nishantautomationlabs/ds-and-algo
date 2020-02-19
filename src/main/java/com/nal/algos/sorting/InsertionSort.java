@@ -5,8 +5,8 @@ import java.util.Arrays;
 /**
  * Created by nishant on 03/01/20.
  */
-//    create a hole from ith position, move the elements from the left sorted subarray by 1 index right if the element is smaller
-//    than value taken from ith position and then insert that element at the hole index
+//    create a hole from ith position, move the elements from the left sorted subarray by 1 index right if the element is
+//    smaller than value taken from ith position and then insert that element at the hole index
 //    Stable sorting algorithm. As elements bubble to the correct position in the sorted area of the array,
 //    the original relative order of equal elements are maintained.
 //    Insertion sort is adaptive. If the array is partially sorted, we'll terminate the sorting loop early. In other words,

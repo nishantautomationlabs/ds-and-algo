@@ -1,8 +1,6 @@
 package com.nal.problems;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by nishant on 25/01/20.
@@ -66,7 +64,7 @@ public class WordBreakCheckProblem {
         dp[0] = true;
 
         for (int i = 1; i <= string.length(); i++) {
-            for (int j = 0; j < string.length(); j++) {
+            for (int j = 0; j < string.length(); j++) { //for (int j = 0; j <= i; j++) {
                 if (dp[j] && set.contains(string.substring(j, i))) {
                     dp[i] = true;
                     break;

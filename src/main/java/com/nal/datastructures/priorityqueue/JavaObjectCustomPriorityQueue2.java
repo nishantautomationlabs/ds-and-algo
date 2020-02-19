@@ -35,7 +35,7 @@ public class JavaObjectCustomPriorityQueue2 {
         }
 
 
-        //        Either the class should implement the Comparable interface and provide the implementation for the
+//        Either the class should implement the Comparable interface and provide the implementation for the
 //        compareTo() function or should provide a custom Comparator while creating the PriorityQueue
         @Override
         public int compareTo(Customer o) {
