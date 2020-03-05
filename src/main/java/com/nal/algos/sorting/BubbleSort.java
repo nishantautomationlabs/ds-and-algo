@@ -6,7 +6,7 @@ import java.util.Arrays;
  * Created by nishant on 03/01/20.
  */
 
-//    repeatedly swap the adjacent elements if they are in wrong order.
+//    repeatedly swap the adjacent elements if they are in wrong order until they are sorted.
 //    Stable sorting algorithm
 //    Bubble sort is adaptive. If the array is partially sorted, we'll terminate the sorting loop early.
 //    Bubble Sort makes O(N^2) swaps

@@ -38,7 +38,7 @@ public class DijkstrasAlgorithm {
     }
 
     public static void main(String[] args) {
-        Graph graph = new Graph(5);
+        WeightedGraph graph = new WeightedGraph(5);
         graph.addEdge(0, 1, 9);
         graph.addEdge(0, 2, 6);
         graph.addEdge(0, 3, 11);

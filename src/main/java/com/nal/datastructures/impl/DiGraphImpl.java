@@ -46,14 +46,14 @@ public class DiGraphImpl {
 
     public void printDFS(int v) {
         boolean visited[] = new boolean[adjListArray.length];
-        System.out.println("Depth First Search Traversal of Graph is: ");
+        System.out.println("Depth First Search Traversal of WeightedGraph is: ");
         DFSUtil(v, visited);
         System.out.println();
     }
 
     public void printDFSForDisconnectedGraph() {
         boolean visited[] = new boolean[adjListArray.length];
-        System.out.println("Depth First Search Traversal of Graph is: ");
+        System.out.println("Depth First Search Traversal of WeightedGraph is: ");
         for (int i = 0; i < adjListArray.length; i++) {
             if (!visited[i])
                 DFSUtil(i, visited);
@@ -73,7 +73,7 @@ public class DiGraphImpl {
     }
 
     public void printBFS(int v) {
-        System.out.println("BFS Traversal of Graph is ");
+        System.out.println("BFS Traversal of WeightedGraph is ");
         boolean visited[] = new boolean[adjListArray.length];
         BFSUtil(v, visited);
         System.out.println();
@@ -98,7 +98,7 @@ public class DiGraphImpl {
     }
 
     public void printBFSForDisconnectedGraph() {
-        System.out.println("BFS Traversal of Graph is ");
+        System.out.println("BFS Traversal of WeightedGraph is ");
         boolean visited[] = new boolean[adjListArray.length];
         for (int i = 0; i < adjListArray.length; i++) {
             if (!visited[i]) {

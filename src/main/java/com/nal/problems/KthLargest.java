@@ -1,7 +1,5 @@
 package com.nal.problems;
 
-import com.nal.leetcode.Solution;
-
 import java.util.Arrays;
 import java.util.PriorityQueue;
 

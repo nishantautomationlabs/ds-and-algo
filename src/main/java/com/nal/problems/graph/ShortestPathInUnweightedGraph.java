@@ -11,7 +11,6 @@ import java.util.*;
  * given vertex while doing the breadth first search.
  */
 public class ShortestPathInUnweightedGraph {
-
     int verticesCount;
     LinkedList<Integer> adjList[];
 

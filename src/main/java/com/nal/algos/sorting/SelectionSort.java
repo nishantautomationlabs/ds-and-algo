@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * Created by nishant on 03/01/20.
  */
-//    repeated find the minimum element from unsorted part and putting it at the beginning
+//    Repeated find the minimum element from unsorted part and putting it at the beginning
 //    Unstable sorting algorithm
 //    Selection sort is non-adaptable.The order of elements does not affect the sorting time.
 //    In other words, even if the array is partially sorted, still each element is compared and there is no breaking out early.

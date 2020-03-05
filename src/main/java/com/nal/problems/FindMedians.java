@@ -32,8 +32,8 @@ public class FindMedians {
     private static double getMedian(PriorityQueue<Integer> lowers, PriorityQueue<Integer> highers) {
         PriorityQueue<Integer> smallerHeap = lowers.size() < highers.size() ? lowers : highers;
         PriorityQueue<Integer> biggerHeap = lowers.size() < highers.size() ? highers : lowers;
-        if(smallerHeap.size() == biggerHeap.size())
-            return ((double)(smallerHeap.peek() + biggerHeap.peek()))/2;
+        if (smallerHeap.size() == biggerHeap.size())
+            return ((double) (smallerHeap.peek() + biggerHeap.peek())) / 2;
         else
             return biggerHeap.peek();
     }

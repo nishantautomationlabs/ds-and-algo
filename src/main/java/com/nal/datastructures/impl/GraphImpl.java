@@ -36,7 +36,7 @@ public class GraphImpl {
 
     public void printDFS(int v) {
         boolean visited[] = new boolean[adjListArray.length];
-        System.out.println("Depth First Search Traversal of Graph is: ");
+        System.out.println("Depth First Search Traversal of WeightedGraph is: ");
         DFSUtil(v, visited);
     }
 
