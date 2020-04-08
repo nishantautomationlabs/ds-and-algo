@@ -81,18 +81,6 @@ public class BSTInOrderSuccessor {
             return findParentSuccessor(root, node);
     }
 
-    private TreeNode findParentSuccessor(TreeNode root, TreeNode node, TreeNode successor) {
-        if (root == null)
-            return null;
-        if (root.data == node.data)
-            return successor;
-        if (node.data < root.data) {
-            successor = root;
-            return findParentSuccessor(root.left, node, successor);
-        } else
-            return findParentSuccessor(root.right, node, successor);
-    }
-
     private TreeNode findParentSuccessor(TreeNode root, TreeNode node) {
         TreeNode successor = null;
         while (root != null && root != node) {
@@ -103,6 +91,18 @@ public class BSTInOrderSuccessor {
                 root = root.right;
         }
         return successor;
+    }
+
+    private TreeNode findParentSuccessorRecursive(TreeNode root, TreeNode node, TreeNode successor) {
+        if (root == null)
+            return null;
+        if (root.data == node.data)
+            return successor;
+        if (node.data < root.data) {
+            successor = root;
+            return findParentSuccessorRecursive(root.left, node, successor);
+        } else
+            return findParentSuccessorRecursive(root.right, node, successor);
     }
 
     private TreeNode findMin(TreeNode node) {

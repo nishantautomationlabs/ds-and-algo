@@ -15,7 +15,7 @@ public class FindMedians {
     public static void main(String[] args) {
         int arr[] = {10, 15, 30, 4, 7, 20, 22};
 
-        PriorityQueue<Integer> lowers = new PriorityQueue<>(Comparator.reverseOrder());
+        PriorityQueue<Integer> lowers = new PriorityQueue<>();
         PriorityQueue<Integer> highers = new PriorityQueue<>();
         double median[] = new double[arr.length];
 

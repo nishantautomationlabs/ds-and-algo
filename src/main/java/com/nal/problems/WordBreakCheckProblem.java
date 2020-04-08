@@ -64,7 +64,8 @@ public class WordBreakCheckProblem {
         dp[0] = true;
 
         for (int i = 1; i <= string.length(); i++) {
-            for (int j = 0; j < string.length(); j++) { //for (int j = 0; j <= i; j++) {
+//            for (int j = 0; j < string.length(); j++) {
+            for (int j = 0; j < i; j++) {
                 if (dp[j] && set.contains(string.substring(j, i))) {
                     dp[i] = true;
                     break;

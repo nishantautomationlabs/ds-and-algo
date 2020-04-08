@@ -83,7 +83,7 @@ public class IntervalSearchTree {
         }
         if (root.left != null && root.left.maxEnd > start) {
             searchAllIntersectingNode(root.left, start, end, result);
-        }
+        } //else condition removed - can go to both ifs
         if (root.right != null && root.interval.start < end) {
             searchAllIntersectingNode(root.right, start, end, result);
         }

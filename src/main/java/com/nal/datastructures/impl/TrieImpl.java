@@ -18,9 +18,6 @@ public class TrieImpl {
         public TrieNode() {
             isEndOfWord = false;
             children = new TrieNode[ALPHABET_SIZE];
-            for (int i = 0; i < ALPHABET_SIZE; i++) {
-                children[i] = null;
-            }
         }
     }
 

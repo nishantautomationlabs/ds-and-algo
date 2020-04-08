@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * Created by nishant on 01/03/20.
- *
+ * Time Complexity is O(d(n + k)) - k is the range used in counting sort generally 10, d no of digit in max number
  */
 public class RadixSort {
 

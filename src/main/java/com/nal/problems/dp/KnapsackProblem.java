@@ -26,9 +26,8 @@ public class KnapsackProblem {
             for (int w = 0; w <= capacity; w++) {
                 if (i == 0 || w == 0) {
                     dp[i][w] = 0;
-                }
-                else if (w >= weight[i - 1]) {
-                    dp[i][w] = Math.max(dp[i - 1][w], price[i -1 ] + dp[i - 1][w - weight[i - 1]]);
+                } else if (w >= weight[i - 1]) {
+                    dp[i][w] = Math.max(dp[i - 1][w], price[i - 1] + dp[i - 1][w - weight[i - 1]]);
                 } else {
                     dp[i][w] = dp[i - 1][w];
                 }

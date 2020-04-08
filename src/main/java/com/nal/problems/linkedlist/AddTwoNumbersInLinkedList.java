@@ -1,4 +1,4 @@
-package com.nal.problems;
+package com.nal.problems.linkedlist;
 
 /**
  * Created by nishant on 07/01/20.

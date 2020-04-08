@@ -19,7 +19,8 @@ public class JavaSet {
         stringSet.add("Ashish");
         stringSet.add("Peeyush");
         stringSet.add("Arnab");
-        stringSet.addAll(Arrays.asList(new String[] {"Aishwarya", "Arnab"}));
+//        stringSet.addAll(Arrays.asList(new String[] {"Aishwarya", "Arnab"}));
+        stringSet.addAll(Arrays.asList("Aishwarya", "Arnab"));
         System.out.println(stringSet);
         stringSet.add("Avik");   // Duplicate values are not added
         System.out.println(stringSet);

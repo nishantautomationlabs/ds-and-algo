@@ -19,7 +19,13 @@ import java.util.PriorityQueue;
  */
 public class JavaIntegerPriorityQueue {
 
+//    class Pair {
+//        int left;
+//        int right;
+//    }
+
     public static void main(String[] args) {
+//        PriorityQueue<Pair> segments = new PriorityQueue<>((a, b) -> (b.right - b.left) - (a.right - a.left));
 //        PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
         PriorityQueue<Integer> priorityQueue = new PriorityQueue<>(Collections.reverseOrder());
 //        PriorityQueue<Integer> priorityQueue = new PriorityQueue<>((x, y) -> Integer.compare(y, x));

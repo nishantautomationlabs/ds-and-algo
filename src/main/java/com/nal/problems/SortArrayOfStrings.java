@@ -1,5 +1,7 @@
 package com.nal.problems;
 
+import java.util.Arrays;
+
 /**
  * Created by nishant on 24/01/20.
  * Sort the words in lexicographical order
@@ -80,11 +82,20 @@ public class SortArrayOfStrings {
             trie.insert(stringArr[i], i);
         }
 
+        System.out.println("-------------------------------------------------");
         System.out.println("Using Trie");
         trie.printInSortedOrderUsingTrie(stringArr);
 
+        System.out.println("-------------------------------------------------");
         System.out.println("Without Trie");
         trie.printInSortedOrder(stringArr);
+
+        System.out.println("-------------------------------------------------");
+        System.out.println("Using Comparator");
+        Arrays.sort(stringArr, (s1, s2) -> s1.compareTo(s2) > 0 ? 1 : -1);
+        for (int i = 0; i < stringArr.length; i++) {
+            System.out.println(stringArr[i]);
+        }
     }
 
 }

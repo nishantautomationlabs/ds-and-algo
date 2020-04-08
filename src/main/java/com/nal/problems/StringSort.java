@@ -22,7 +22,6 @@ public class StringSort {
         Arrays.sort(chars, Comparator.comparingInt(Character::toLowerCase));
 //        Arrays.sort(chars, (c1, c2) -> Character.compare(Character.toLowerCase(c1), Character.toLowerCase(c2)));
 //        Arrays.sort(chars, Comparator.comparingInt(c -> (Character.toLowerCase(c) - 'a')));
-
         StringBuilder builder = new StringBuilder(chars.length);
         for (Character c : chars) {
             builder.append(c.charValue());

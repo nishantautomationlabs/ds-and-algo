@@ -28,9 +28,11 @@ public class CountingSort {
         for(int i : arr) {
             counts[i]++;
         }
+        System.out.println(Arrays.toString(counts));
         for(int i = 1; i < counts.length; i++) {
             counts[i] += counts[i-1];
         }
+        System.out.println(Arrays.toString(counts));
         int[] sortedArr = new int[arr.length];
         for(int i = arr.length - 1; i >= 0; i--) {
             sortedArr[counts[arr[i]] - 1] = arr[i];

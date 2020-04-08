@@ -34,6 +34,8 @@ public class JavaLinkedList {
         System.out.println("Remove: " + linkedList.remove());
         System.out.println("Remove First: " + linkedList.removeFirst());
         System.out.println("Remove Last: " + linkedList.removeLast());
+        System.out.println("Remove First Occurence: " + linkedList.removeFirstOccurrence(2));
+        ;
         printLinkedList(linkedList);
         linkedList.clear();
         System.out.println("Size: " + linkedList.size());

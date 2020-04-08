@@ -28,7 +28,6 @@ public class TravellingSalesmanProblem {
             return minCost;
         }
 
-
         for(int i = 0; i < vertexCount; i++) {
             if(!visited[i] && graph[currPos][i] > 0) {
                 visited[i] = true;

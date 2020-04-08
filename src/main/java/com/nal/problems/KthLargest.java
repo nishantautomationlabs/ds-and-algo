@@ -42,7 +42,7 @@ public class KthLargest {
         return minHeap.peek();
     }
 
-    //O(N) time complexity
+    //O(N) time complexity n + 1/2 n + 1/4 n + 1/8 n + ..... < 2 n
     private int kthLargestElementUsingQuickPartition(int[] nums, int k) {
         if (nums == null || nums.length == 0 || k > nums.length) {
             return -1;
