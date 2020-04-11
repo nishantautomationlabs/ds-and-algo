@@ -66,14 +66,14 @@ public class KthLargest {
 
     private int partition(int[] nums, int left, int right) {
         int pivot = nums[right];
-        int j = left;
+        int index = left;
         for (int i = left; i <= right - 1; i++) {
             if (nums[i] > pivot) {
-                swap(nums, i, j++);
+                swap(nums, i, index++);
             }
         }
-        swap(nums, j, right);
-        return j;
+        swap(nums, index, right);
+        return index;
     }
 
     private void swap(int[] nums, int i, int j) {

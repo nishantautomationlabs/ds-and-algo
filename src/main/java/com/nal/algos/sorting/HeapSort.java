@@ -54,6 +54,7 @@ public class HeapSort {
         }
     }
 
+    //Time Complexity O(N)
     private void maxHeapifyArray(int[] arr, int n) {
         for (int index = (n / 2) - 1; index >= 0; index--) {
             maxHeapifyDown(arr, n, index);
