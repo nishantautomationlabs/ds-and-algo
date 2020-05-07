@@ -8,7 +8,7 @@ import java.util.Arrays;
 public class QuickSort2 {
 
     public static void main(String[] args) {
-        int[] arr = {6, 2, 3, 7, 5, 9, 1};
+        int[] arr = {1, 2, 3, 7, 4, 5, 6};
         System.out.println(Arrays.toString(arr));
         quickSort(arr, 0, arr.length - 1);
         System.out.println(Arrays.toString(arr));
@@ -17,7 +17,7 @@ public class QuickSort2 {
     private static void quickSort(int[] arr, int start, int end) {
         if (start >= end)
             return;
-        int pivot = arr[(end+start)/2];
+        int pivot = arr[(end+start) / 2];
         int partitionIndex = partition(arr, start, end, pivot);
         System.out.println("partitionIndex " + start + " " + end + " " + partitionIndex);
         System.out.println(Arrays.toString(arr));
@@ -27,7 +27,6 @@ public class QuickSort2 {
 
     //O(nlogn) time (worst case O(n2) and O(1) space
     private static int partition(int[] arr, int start, int end, int pivot) {
-
         while (start <= end) {
             while (arr[start] < pivot)
                 start++;
